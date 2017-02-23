@@ -4,4 +4,4 @@ class FindStores
     StoreService.find_by_zipcode(zipcode)
   end
 
-end 
+end
