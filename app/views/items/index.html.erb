@@ -1,4 +1,10 @@
 <div class="container">
+  <%= form_tag :search, method: :get, class: "form-inline" do %>
+    <div class="form-group search-field">
+      <%= text_field_tag :q, "Search by zip...", class: "fomr-control", id: "Find Events" %>
+      <%= submit_tag "Find Stores", class: "btn btn-primary", id: "Find Stores" %>
+    </div>
+    <%end%>
   <div class="row">
     <div class="col-sm-12">
       <h1><%= @items.count %> Items</h1>
@@ -15,4 +21,3 @@
     </div>
   <% end %>
 </div>
-
