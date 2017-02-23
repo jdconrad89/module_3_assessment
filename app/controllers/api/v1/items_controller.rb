@@ -7,4 +7,10 @@ class Api::V1::ItemsController < ApplicationController
   def show
     render json: Item.find(params[:id]), :serializer => ItemsSerializer
   end
+
+  def destroy
+    item = Item.find(params[:id])
+    item.delete
+    render json: Item.all
+  end
 end
