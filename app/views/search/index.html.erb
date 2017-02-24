@@ -1,5 +1,5 @@
 <table class="table table-hover table-condensed">
-   <h2><%= @total_stores %> Total Stores </h2>
+   <h2><%= @presenter.total_stores %> Total Stores </h2>
   	<thead>
   		<tr>
         <th> "Name"</th>
@@ -11,7 +11,7 @@
   	</thead>
   	<tbody>
       <tr>
-      <% @stores.each do |store| %>
+      <% @presenter.stores.each do |store| %>
   		<td> <%= store.long_name %> </td>
   		<td> <%= store.city %> </td>
   		<td> <%= store.distance %> </td>
