@@ -1,5 +1,5 @@
 <table class="table table-hover table-condensed">
-   <h2><%= @stores["total"] %> Total Stores </h2>
+   <h2><%= @total_stores %> Total Stores </h2>
   	<thead>
   		<tr>
         <th> "Name"</th>
@@ -11,12 +11,12 @@
   	</thead>
   	<tbody>
       <tr>
-      <% @stores["stores"].each do |store| %>
-  		<td> Name:<%= store["longName"] %> </td>
-  		<td> City:<%= store["city"] %> </td>
-  		<td> Distance:<%= store["distance"] %> </td>
-  		<td> Phone Number:<%= store["phone"] %> </td>
-  		<td> Store Type:<%= store["storeType"] %> </td>
+      <% @stores.each do |store| %>
+  		<td> <%= store.long_name %> </td>
+  		<td> <%= store.city %> </td>
+  		<td> <%= store.distance %> </td>
+  		<td> <%= store.phone_number %> </td>
+  		<td> <%= store.store_type %> </td>
    </tr>
       <% end %>
    </tbody>
